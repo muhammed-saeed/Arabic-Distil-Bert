@@ -5,15 +5,32 @@ to train our Sudanese Bert Model
 4-The sudanese Data is collected in previous research titled:SudaBert
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+1- 
+
 how to setup GCP
-In google cloud go to compute engine --> then choose create instance --> the 
+In google cloud go to compute engine --> then choose VM instance then choose create instance --> 
+i-make sure the name of the instance is the same as the name of the TPU you will create later on in our case the name is "distilbert-pretraining"
+ii- for our case the tpu's were free at europe-west4(Netherlands) so i choose this as the region
+iii- choosing custom machine with 8 CPU's and 16 Gigabyte ram
+iv-choosing desk HDD with 1.7tera maximum allowed with TPU in our case
+v-Operating system --> choose deep learning on linux and the version choose pytorch/Xla
+usually its at the bottom of the list
 
 
 
 /////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//////////
+2-
 Install pip and pip3
 
-nstall pip3
+install pip:
+
+sudo apt update
+sudo apt install python-pip
+pip --version
+
+
+install pip3:
+
 sudo apt update
 sudo apt install python3-pip
 pip3 --version
@@ -21,8 +38,11 @@ pip3 --version
 
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+3-
+
 how to setup pytorch TPU
-Step1L
+Step1:
 
 Create and Intiate the TPU using gcloud command:
  gcloud compute tpus create distilbert-pretraining \
@@ -58,3 +78,36 @@ print(t1)
               ============
 
 Note: if the output is 3x3 array filled with ones then your TPU is correctly created and working with pytorch
+
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
+4- 
+Download the latest version of datasets,likewise, of transformers using "git"  and install it by the following commands
+
+git clone https://github.com/huggingface/datasets.git
+cd datasets
+pip3 install -e .
+cd ~
+git clone https://github.com/huggingface/transformers.git
+cd transformers
+pip install .
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\////////////////////\\\\\\\\\\\\\\\\////////////////////////\\\\\\\\\\\\\
+5-run the transformers/examples/language-modeling/run_mlm.py  by typing the following command on terminal
+
+python3 transformers/examples/xla_spawn.py --num_cores=8 \
+   transformers/examples/language-modeling/run_mlm.py \
+    --model_name_or_path init_distilbert\
+    --train_file 30gig_files/ar_file1.txt \
+    --do_train \
+    --do_eval  \
+    --output_dir output \
+    --validation_split_percentage=2 \
+    --per_device_eval_batch_size=2048 \
+    --num_train_epochs=1 \
+    --line_by_line
+    
+  Note we are dividing the 81 gigabyte oscar data into three chunks
+    
+  
