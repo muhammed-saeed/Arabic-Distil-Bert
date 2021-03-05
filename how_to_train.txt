@@ -1,0 +1,11 @@
+python3 transformers/examples/xla_spawn.py --num_cores=8 \
+   transformers/examples/language-modeling/run_mlm.py \
+    --model_name_or_path init_distilbert\
+    --train_file 30gig_files/ar_file1.txt \
+    --do_train \
+    --do_eval  \
+    --output_dir output \
+    --validation_split_percentage=2 \
+    --per_device_eval_batch_size=2048 \
+    --num_train_epochs=1 \
+    --line_by_line
