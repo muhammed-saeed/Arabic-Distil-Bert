@@ -110,4 +110,5 @@ python3 transformers/examples/xla_spawn.py --num_cores=8 \
     
   Note we are dividing the 81 gigabyte oscar data into three chunks
     
-  
+  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\///////////////////\\\\\\\\\\\\\\\\\\\\\\\\\///////////
+  6-
