@@ -6,7 +6,7 @@ with open('ar.txt') as bigfile:
         if lineno % lines_per_file == 0:
             if smallfile:
                 smallfile.close()
-            small_filename = 'araDistilBertVocabFile2/small_file_{}.txt'.format(lineno + lines_per_file)
+            small_filename = '/home/arabic-distillbert/araDistilBertVocabFile2/small_file_{}.txt'.format(lineno + lines_per_file)
             smallfile = open(small_filename, "w")
             print(str(lineno) + '/' + num_lines)
         smallfile.write(line)
