@@ -16,6 +16,12 @@ iv-choosing desk HDD with 1.7tera maximum allowed with TPU in our case
 v-Operating system --> choose deep learning on linux and the version choose pytorch/Xla
 usually its at the bottom of the list
 
+##################################################
+
+Note now there are more updated versions of pytorch_xla, in the past we have to use debian_9 pytorch_xla; 
+however now one can use pytorch_xla_1.8 fastai packages
+
+
 
 
 /////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//////////
