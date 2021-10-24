@@ -23,3 +23,6 @@ trainer = tokenizer.train(
     wordpieces_prefix="##"
 )
 
+tokenizer.save("/home/data_driven_project_enigma/vocab.txt", True)
+#the first argument to save method is the path of the saving file, the second argument is boolean True
+
