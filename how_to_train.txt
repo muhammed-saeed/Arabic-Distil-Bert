@@ -35,11 +35,24 @@ python3 transformers/examples/pytorch/language-modeling/run_mlm.py   --train_fil
 
 $$$$$ pre-training our distilbert arabic model_name_or_path
 
+## Using CPU only (without TPU)
 python3 transformers/examples/pytorch/language-modeling/run_mlm.py \
     --line_by_line \
     --config_name /home/data_driven_project_enigma/tester/ \
     --tokenizer_name /home/data_driven_project_enigma/tester/ \
     --train_file /home/data_driven_project_enigma/output.txt \
     --max_seq_length 512 \
+    --do_train \
+    --output_dir /home/data_driven_project_enigma/mine_vocab_method/test-mlm
+####
+#using TPU
+python3 transformers/examples/pytorch/language-modeling/run_mlm.py \
+    --line_by_line \    
+    --config_name /home/data_driven_project_enigma/tester/ \
+    --tokenizer_name /home/data_driven_project_enigma/tester/ \
+    --train_file /home/data_driven_project_enigma/output.txt \
+    --max_seq_length 512 \
+    --tpu_metrics_debug True \
+    --tpu_num_cores 8 \
     --do_train \
     --output_dir /home/data_driven_project_enigma/mine_vocab_method/test-mlm
