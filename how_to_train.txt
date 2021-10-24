@@ -9,3 +9,18 @@ python3 transformers/examples/xla_spawn.py --num_cores=8 \
     --per_device_eval_batch_size=2048 \
     --num_train_epochs=1 \
     --line_by_line
+
+
+///////////////////////////////////////////////////////
+the above code was used in the old days,, however now we are using a more updated version of the code
+"however this code uses distilbert-base-uncased vocabulary which is english one"
+
+
+python3 transformers/examples/pytorch/language-modeling/run_mlm.py  \
+ --train_file output.txt \
+ --model_type distilbert \ 
+ --tokenizer_name distilbert-base-uncased \
+ --do_train  --mlm_probability 0.0 \
+ --output_dir /home/data_driven_project_enigma/tmp_bert/test-mlm
+
+\\\\\\\\\\\\\\\\\\\\\/////////////////////
