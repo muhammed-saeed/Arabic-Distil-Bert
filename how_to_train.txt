@@ -16,11 +16,16 @@ the above code was used in the old days,, however now we are using a more update
 "however this code uses distilbert-base-uncased vocabulary which is english one"
 
 
-python3 transformers/examples/pytorch/language-modeling/run_mlm.py  \
- --train_file output.txt \
+python3 transformers/examples/pytorch/language-modeling/run_mlm.py --train_file output.txt \
  --model_type distilbert \ 
  --tokenizer_name distilbert-base-uncased \
- --do_train  --mlm_probability 0.0 \
+ --do_train \
+ --mlm_probability 0.0 \
+ --tpu_metrics_debug True \
+ --tpu_num_cores 8 \
  --output_dir /home/data_driven_project_enigma/tmp_bert/test-mlm
 
 \\\\\\\\\\\\\\\\\\\\\/////////////////////
+
+python3 transformers/examples/pytorch/language-modeling/run_mlm.py   --train_file output.txt --model_type distilbert  --tokenizer_name distilbert-base-uncased   --tpu_metrics_debug False --tpu_num_cores 8  --do_train  --mlm_probability 0.0   --output_dir /home/data_driven_project_enigma/tmp_bert/test-mlm
+
