@@ -7,9 +7,13 @@ import gzip
 
 files = list(filter(lambda x: x.endswith(".json.gz"), os.listdir()))
 # list all the files those ending with json
+<<<<<<< HEAD
 print(files)
 length_ = int(len(files) / 4)
 files_to_be_processed = files[:length_]
+=======
+# print(files)
+>>>>>>> be2d5d80ea59aa7b44631ac9c194342a6af44847
 
 
 def processing(encoded_line):
