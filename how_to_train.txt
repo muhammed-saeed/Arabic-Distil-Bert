@@ -56,3 +56,9 @@ python3 transformers/examples/pytorch/language-modeling/run_mlm.py \
     --tpu_num_cores 8 \
     --do_train \
     --output_dir /home/data_driven_project_enigma/mine_vocab_method/test-mlm
+
+
+
+//////////////////////////////////////////////////////////////////////////
+
+for creating the vocab of 61GB uncleaned data, I used up to 6 cores and 40 GB RAM, yet it crashed only before 15 count pairs out of 460000 countpairs

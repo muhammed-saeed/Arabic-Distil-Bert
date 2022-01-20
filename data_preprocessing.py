@@ -7,7 +7,9 @@ import gzip
 
 files = list(filter(lambda x: x.endswith(".json.gz"), os.listdir()))
 # list all the files those ending with json
-# print(files)
+print(files)
+length_ = int(len(files) / 4)
+files_to_be_processed = files[:length_]
 
 
 def processing(encoded_line):
@@ -15,6 +17,10 @@ def processing(encoded_line):
     # arabic data_line
 
     return json.loads(decoded_line)
+
+
+print(files_to_be_processed)
+print(length_)
 
 
 def pre_processing_all(my_file):
@@ -37,4 +43,4 @@ def pre_processing_all(my_file):
     # json.dump(decoded_lines,"theory.txt");
 
 
-list(map(pre_processing_all, files))
+list(map(pre_processing_all, files_to_be_processed))
