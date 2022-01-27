@@ -4,6 +4,23 @@
 to train our Sudanese Bert Model
 4-The sudanese Data is collected in previous research titled:SudaBert
 
+
+///////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\/////////////////\\\\\\\\\\\\\\\
+downloading the arabic data set note that the data is hosted in HumanID Oscar and needs to send them email with univesrity.edu to get access to teh data
+
+to downlaod and authenticate the data 
+/home/sudanese_distilbert/files_ar/oscar-prive.huma-num.fr/2109/packaged/ar
+
+wget --user=USERNAME --ask-password https://oscar-prive.huma-num.fr/2109/packaged/ar/ar_part_1.txt.gz
+
+to donwload the entire directory
+wget -r --user=USERNAME --ask-password https://oscar-prive.huma-num.fr/2109/packaged/ar/
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 1- 
 
