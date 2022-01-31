@@ -51,5 +51,4 @@ def pre_processing_all(my_file):
 list(map(pre_processing_all, files))
 
 
-# the lsis of programs
 # note three days without codeing
