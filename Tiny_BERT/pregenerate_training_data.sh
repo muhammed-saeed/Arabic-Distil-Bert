@@ -6,3 +6,5 @@ python3 /home/CE/musaeed/Pretrained-Language-Model/TinyBERT/pregenerate_training
   --num_workers 1 \
   --epochs_to_generate 3 \
   --output_dir /home/CE/musaeed/train_data_tiny_bert_ar
+
+  ####
