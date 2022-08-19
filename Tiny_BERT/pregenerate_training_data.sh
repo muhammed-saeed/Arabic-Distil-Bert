@@ -7,4 +7,3 @@ python3 /home/CE/musaeed/Pretrained-Language-Model/TinyBERT/pregenerate_training
   --epochs_to_generate 3 \
   --output_dir /home/CE/musaeed/train_data_tiny_bert_ar
 
-  ####
