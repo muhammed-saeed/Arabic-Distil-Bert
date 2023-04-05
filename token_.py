@@ -7,5 +7,5 @@ for i in range(27):
     
     #input_file1 = 'gs://sudabert_bucket/sudanese_txt_cleaned_shuffled_splits/suda_txt_' + str(i) +'.txt '
     #output_file1 = 'output_file=gs://sudabert_bucket/tmp3/tf_examples.tfrecord_'+ str(i)
-
+#
     os.system(argss)
