@@ -3,6 +3,7 @@
 3-Modern Standard Arabic Data used for training is Oscar Arabic data the 81 Gigabyte version, we have this very version in our google cloud bucket since we used it
 to train our Sudanese Bert Model
 4-The sudanese Data is collected in previous research titled:SudaBert
+5
 
 ///////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\/////////////////\\\\\\\\\\\\\\\
 downloading the arabic data set note that the data is hosted in HumanID Oscar and needs to send them email with univesrity.edu to get access to teh data
